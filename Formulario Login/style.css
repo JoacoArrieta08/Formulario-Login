@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --background-color: #1E1E1E;
+    --primary-color: #FFFFFF;
+    --accent-color: #2E4CEE;
+    --border-color: #FFFFFF;
+}
+
+
+body{
+    background-color: var(--background-color);
+    font-family: 'Noto Sans';
+    padding: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h1{
+    font-size: 96px;
+    font-weight: 500;
+}
+
+h2{
+    width: 30%;
+    font-size: 22px;
+    font-weight: 300;
+    border: 2px solid var(--border-color);
+    padding: 2%;
+}
+
+.bienvenida{
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+}
+
+.content{
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.contenedor{
+    width: 25%;
+    height: 80vh;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+#ellipse{
+    height: fit-content;
+    width: fit-content;
+    position: absolute; /* Posiciona la imagen de forma absoluta dentro del contenedor */
+    top: 50px;
+    left: 1200px;
+    z-index: -1; /* Coloca la imagen detrás del contenido del contenedor */
+    animation: slide 3s 1;
+}
+
+h3{
+    color: var(--primary-color);
+    font-size: 36px;
+}
+
+input{
+    width: 20vw;
+    height: 5vh;
+    border-radius: 10px;
+    border: 0px;
+}
+
+input::placeholder{
+    font-family: 'Noto Sans';
+    padding: 10px;
+}
+
+.alternativa{
+    width: 90%;
+}
+
+button{
+    background-color: var(--accent-color);
+    height: 5vh;
+    border-radius: 10px;
+    margin: 30px;
+    font-family: 'Noto Sans';
+    font-size: 20px;
+    color: var(--primary-color);
+    font-weight: 400;
+    border: 0px;
+}
+
+button:active{
+    transform: scale(1.1);
+}
+
+/*Animacion*/
+@keyframes slide{
+    0%{
+        transform: translate(-1200px);
+    }
+    100%{
+        transform: translate(0px);
+    }
+}
